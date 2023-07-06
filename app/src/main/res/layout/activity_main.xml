@@ -1,50 +1,40 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
+
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/swipeRefreshLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <androidx.constraintlayout.widget.ConstraintLayout
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/gradient">
 
-    <!--    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout-->
-    <!--    android:id="@+id/swipe"-->
-    <!--    android:layout_width="match_parent"-->
-    <!--    android:layout_height="match_parent">-->
 
-    <!--    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>-->
+        <ImageButton
+            android:id="@+id/searchImage"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:padding="5dp"
+            android:background="@drawable/round_shape"
+            android:src="@drawable/baseline_search_24"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    <ImageButton
-        android:id="@+id/searchImage"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:background="@android:color/transparent"
-        android:layout_marginTop="10dp"
-        android:src="@drawable/baseline_search_24"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintEnd_toStartOf="@id/cLocation"/>
-
-    <ImageButton
-        android:id="@+id/cLocation"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:tooltipText="Current location"
-        android:background="@android:color/transparent"
-        android:src="@drawable/baseline_my_location_24"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginTop="10dp"
-        tools:targetApi="o" />
-
-    <EditText
+        <EditText
         android:id="@+id/search_bar"
         android:layout_width="0dp"
         android:layout_height="50dp"
         android:layout_margin="10dp"
         android:drawablePadding="20dp"
+            android:background="@drawable/round_shape"
         android:drawableTint="@color/white"
-        android:hint="Search here..."
+        android:hint="Search here..." android:layout_marginRight="10dp"
         android:imeOptions="actionSearch"
         android:importantForAutofill="no"
         android:inputType="text"
@@ -365,3 +355,5 @@
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
